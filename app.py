@@ -144,7 +144,7 @@ def scrape_yelp(keyword, location):
             try:
                 cats = soup.select("span.css-oe5jd3")
                 cats = [ele.select("a.css-1422juy") for ele in cats]
-                cats = [ele for ele in cats if ele][0][0].text
+                cats = [ele[0].text for ele in cats if ele]
             except:
                 cats = None
 
