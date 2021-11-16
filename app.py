@@ -194,7 +194,7 @@ def scrape_yelp(keyword, location):
     num_rows = scraped_details.shape[0]
     with open('scrape_stats.csv', 'a+', newline='') as f:  #
         w = csv.writer(f)
-        w.writerow([file_name] + [elapsed] + [num_rows + ' rows'])
+        w.writerow([file_name] + [elapsed] + [str(num_rows) + ' rows'])
         f.close()
 
 
